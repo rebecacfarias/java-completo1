@@ -2,9 +2,41 @@ package entities;
 
 public class Produto {
 	
-	public String name;
-	public double price;
-	public int inStock;
+	private String name;
+	private double price;
+	private int inStock;
+	
+	public Produto() {}
+	public Produto(String name, double price, int inStock) {
+		this.name = name;
+		this.price = price;
+		this.inStock = inStock;
+	}
+	
+	public Produto(String name, double price) {
+		this.name = name;
+		this.price = price;
+	}
+	//
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	//
+	public double getPrice() {
+		return price;
+	}
+	public void setPrice(double price) {
+		this.price = price;
+	}
+	//
+	public int getInStock() {
+		return inStock;
+	}
+	//
+	
 	
 	public double totalValueInStock() {
 		return price*inStock;

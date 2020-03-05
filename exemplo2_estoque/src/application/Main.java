@@ -10,18 +10,15 @@ public class Main {
 	public static void main(String[] args) {
 		Locale.setDefault(Locale.US);
 		
-		Produto prod;
-		prod = new Produto();
-		
 		System.out.println("- Enter product data below -");
 		Scanner sc = new Scanner(System.in);
 				
 		System.out.print("NAME: ");
-		prod.name = sc.next();
+		String name = sc.next();
 		System.out.print("PRICE: ");
-		prod.price = sc.nextDouble();
-		System.out.print("QUANTITY IN STOCK: ");
-		prod.inStock = sc.nextInt();
+		double price = sc.nextDouble();
+		
+		Produto prod = new Produto(name,price);
 		
 		System.out.print("Product data: ");
 		prod.showData();
